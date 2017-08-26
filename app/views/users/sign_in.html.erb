@@ -1,0 +1,32 @@
+<%= form_tag action: :signup, method: :post do%>
+<table  class="table table-striped">
+  <tr>
+  <td><%= label_tag :email%></td>
+  <td><%= email_field_tag :email%></td>
+  </tr>
+  <tr>
+  <td><%= label_tag :password%></td>
+  <td><%= password_field_tag :password%></td>
+  </tr>
+   <tr>
+  <td><%= submit_tag "SignIn", :style => "width:90px;color:green;"%></td>
+  
+   <td><%= link_to "Recover Password", forget_password_users_path%></td>
+  <td><%= link_to "Facebook+", "/auth/facebook"%></td>
+  <td><%= link_to 'My profile' usersuser_profile
+
+  </tr>
+  <p></p>
+</table>
+
+  <td><%= link_to "create new account", new_user_path%></td>
+  <p>
+  <%= image_tag "register_block_img.jpg" %></p><br>
+  <h2>New Customer?</h2>
+<ul>
+<style="list_style_type:circle"</style>
+  <li>Express Checkout</li>
+  <li>View your order history & status</li>
+  <li>Gift Registry & Wish List</li>
+</ul> 
+<%end%>

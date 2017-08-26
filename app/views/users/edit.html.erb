@@ -1,0 +1,62 @@
+<%= form_for @user do |f|%>
+<% if @user.errors.any? %>
+  <% @user.errors.messages.each do |key,msg |%>
+    <ul>
+    <li><%= "#{key} : " + msg.first%></li>
+    </ul>
+  <%end%>
+<%end%>
+<table  class="table table-striped">
+  <tr>
+  <td><%= f.label :name%></td>
+  <td><%= f.text_field :name%></td>
+  </tr>
+  <tr>
+  <td><%= f.label :email%></td>
+  <td><%= f.email_field :email%></td>
+  </tr>
+  <tr>
+  <td><%= f.label :password%></td>
+  <td><%= f.password_field :password%></td>
+  </tr>
+  <tr>
+  <td><%= f.label :confirm%></td>
+  <td><%= f.password_field :confirm%></td>
+  </tr>
+  <tr>
+  <td><%= f.label :mobile%></td>
+  <td><%= f.text_field :mobile%></td>
+  </tr>
+<tr>
+ <td><%= link_to "Facebook+", "/auth/facebook"%></td>
+<table>
+<form>
+  <input type="radio" name="gender" value="male" checked> Male<br>
+  <input type="radio" name="gender" value="female"> Female<br>
+  <input type="checkbox" name="subscribe">Yes! I want to subscribe for the latest updates
+  </form>
+  </table>
+ <%end%>
+ <table>
+ <form>
+ <div class="clearfix">
+      
+    <button type="submit" class="signupbtn">Sign Up</button>
+     </table>
+      <table>
+      <p>
+      <%=image_tag "login_page_img.png" %></p><br>
+      <h2>Already have an Account?</h2>
+      <ul>
+<style="list_style_type:circle"</style>
+  <li>Express Checkout</li>
+  <li>View your order history & status</li>
+  <li>Gift Registry & Wish List</li>
+</ul> 
+      <%= link_to"Login", sign_in_users_path %>
+      </table>
+
+    </div>
+  </div>
+  </form>
+  
